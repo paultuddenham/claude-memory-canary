@@ -2,12 +2,14 @@
 [![selftest](https://github.com/paultuddenham/claude-memory-canary/actions/workflows/selftest.yml/badge.svg)](https://github.com/paultuddenham/claude-memory-canary/actions/workflows/selftest.yml)
 
 One Python file that proves your Claude Code sessions on two machines really share
-memory. If you sync notes between a desktop and a laptop (a git repo, a shared
-folder, anything), this is the test that tells you whether the other side actually
+memory. If you sync notes between a desktop and a laptop through a git repo, this
+is the test that tells you whether the other side actually
 got them, instead of trusting that the push went out.
 
-It is the "two-facts test" done at the right layer: seed two unguessable facts on
-machine A, check for them on machine B. PASS or FAIL, with the reason and the age.
+It is the "two-facts test" done at the right layer: seed two unguessable facts (a code
+word and a number) on machine A, check for them on machine B. The script checks both
+against a checksum; your session is asked for the code word. PASS or FAIL, with the
+reason and the age.
 
 ## Use it
 
@@ -32,7 +34,8 @@ private).
    ```
    It pulls, then prints PASS only if the canary is there, unchanged, written by a
    different machine and under 24 hours old (`--max-age-h` to change).
-4. The human half: open a Claude Code session on machine B and ask, in your own
+4. The human half: open a Claude Code session on machine B, started inside the
+   cloned repo (for example `cd ~/memory`) so it can read `working/canary.md`, and ask, in your own
    words, what the canary's code word is. A plausible guess instead of the word
    means your sessions are not loading what arrived.
 
