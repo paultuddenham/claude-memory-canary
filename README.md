@@ -1,4 +1,5 @@
 # Memory Canary for Claude Code (free)
+[![selftest](https://github.com/paultuddenham/claude-memory-canary/actions/workflows/selftest.yml/badge.svg)](https://github.com/paultuddenham/claude-memory-canary/actions/workflows/selftest.yml)
 
 One Python file that proves your Claude Code sessions on two machines really share
 memory. If you sync notes between a desktop and a laptop (a git repo, a shared
