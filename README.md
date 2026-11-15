@@ -45,6 +45,8 @@ stop-hook push of your private memory repo with a merge-never-clobber policy,
 Claude Code memory notes that travel by tag, lessons loaded by topic the first time
 a session needs them, a promote job for long-term notes, and a 19-page guide.
 Write-up of the design: https://tudlab.com/memory
+
+The real setup it comes from, drawn as one map with real counts: https://tudlab.com/answers/home-run-by-ai-agents-map
 US$29: https://gumroad.com/l/tudlab-code-memory
 
 MIT licence.
